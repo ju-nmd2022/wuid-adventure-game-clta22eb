@@ -112,4 +112,6 @@ h1 {
     background-color: aliceblue;
     position: fixed;
     align-self: center;
+    justify-self: center;
+    margin: 200px;
 }
