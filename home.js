@@ -20,8 +20,17 @@ stove.onclick = function() {
     item3.src = "meat.svg";
 }
 
-// let complete.style.visibility = "hide";
+complete.style.display = "none";
 
-// eat.onclick = function(){
+eat.onclick = function(){
+    if (corn.style.display === "none") {
+        complete.style.display = "block"
+    } else {
+        alert("ew bad taco... assemble it first!")
+    }
+}
 
+// complete.onclick = function(){
+//     alert("click on the door to go back to the beginning. sorry, im to tired to fix this last part :,)")
+    
 // }
