@@ -1,0 +1,73 @@
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+* {
+    margin: 0;
+}
+h1 {
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.background {
+    position: fixed;
+    max-height: fit-content;
+    z-index: 10;
+}
+
+.content {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: 
+    "head head head head head head head head"
+    ". . . . . . . ."
+    ". store store . . home home ."
+    ". store store first first home home ."
+    ". store store first first home home ."
+    ". store store . . home home ."
+    ". . . . . . . .";
+    }
+
+
+.home { 
+    grid-area: home;
+    z-index: 15;
+    align-self: end;
+    margin-bottom: 50px;
+}
+
+.supermarket { 
+    grid-area: store;
+    z-index: 15;
+    align-self: end;
+    margin-bottom: 50px;
+}
+
+#head { 
+    grid-area: head;
+    z-index: 15;
+    align-self: center;
+    justify-self: center;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#begin {
+    /* grid-area: first; */
+    z-index: 20;
+    background-color: aliceblue;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    position:absolute;
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-left: 300px;
+}

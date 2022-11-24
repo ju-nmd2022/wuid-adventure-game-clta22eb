@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+}
+.background {
+    position: fixed;
+    max-height: fit-content;
+    z-index: 10;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size:2rem;
+}
+
+.content {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: 
+    "head head head head . . . ."
+    "head head head head . . . ."
+    "door door . . . . . ."
+    "door door cash cash . . item3 ."
+    "door door cash cash . item1 . ."
+    "door door cash cash . . item2 ."
+    "door door cash cash . . . ."
+    "bottom bottom bottom bottom . . . .";
+    }
+
+#door {
+    grid-area: door; 
+    z-index: 15;
+    align-self: end;
+    margin-bottom: -10px;
+}
+
+#cash {
+    grid-area: cash;
+    z-index: 15;
+    align-self: end;
+    justify-self: end;
+    width: 170%;
+    margin-right: -80px;
+}
+
+#item1 {
+    grid-area: item1;
+    z-index: 15;
+    width: fit-content;
+    align-self: end;
+    justify-self: end;
+}
+#item2 {
+    grid-area: item2;
+    z-index: 15;
+    width: fit-content;
+    align-self: end;
+    justify-self: end;
+    margin-bottom: -170px;
+}
+#item3 {
+    grid-area: item3;
+    z-index: 15;
+    width: fit-content;
+    align-self: end;
+    justify-self: end;
+}
+
+.head {
+    grid-area: head;
+    z-index: 15;
+    align-self: center;
+    justify-self: center;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#basket {
+    grid-area: bottom;
+    background-color: aliceblue;
+    border: 5px, solid, #000000;
+    z-index: 15;
+    padding-top: 100px;
+}
