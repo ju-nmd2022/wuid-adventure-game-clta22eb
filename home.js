@@ -16,19 +16,23 @@ meat.onclick = function(){
 }
 
 stove.onclick = function() {
-    alert("Your meat is now cooked!")
+    alert("Your meat is now cooked!");
     item3.src = "meat.svg";
+    meat.setAttribute("class", "cooked");
 }
 
 complete.style.display = "none";
 
 eat.onclick = function(){
-    if (corn.style.display === "none") {
-        complete.style.display = "block"
+     // How to use and operator (&&) found at https://bobbyhadz.com/blog/javascript-specify-multiple-conditions-in-if-statement 
+    if (salsa.style.display === "none" && corn.style.display === "none" && meat.style.display === "none" && meat.hasAttribute("class", "cooked")) {
+        complete.style.display = "block";
     } else {
-        alert("ew bad taco... assemble it first!")
+        alert("ew bad taco... assemble correctly it first! Let's try again.");
+        location.reload();
     }
 }
+
 
 // complete.onclick = function(){
 //     alert("click on the door to go back to the beginning. sorry, im to tired to fix this last part :,)")

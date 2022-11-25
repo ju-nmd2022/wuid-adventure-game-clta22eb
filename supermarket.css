@@ -72,15 +72,7 @@ h1 {
     z-index: 15;
     align-self: center;
     justify-self: center;
-    background-color: aliceblue;
+    background-color: white;
     padding: 5px;
     border-radius: 10px;
-}
-
-#basket {
-    grid-area: bottom;
-    background-color: aliceblue;
-    border: 5px, solid, #000000;
-    z-index: 15;
-    padding-top: 100px;
 }
