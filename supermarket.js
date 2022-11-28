@@ -2,14 +2,24 @@ const salsa = document.getElementById("item1")
 const corn = document.getElementById("item2")
 const meat = document.getElementById("item3")
 
+console.log(sessionStorage.display);
+if (sessionStorage.display !== undefined) {
+    salsa.style.display = sessionStorage.display;
+    corn.style.display = sessionStorage.display;
+    meat.style.display = sessionStorage.display;
+}
+
 salsa.onclick = function(){
     salsa.style.display = "none";
+    sessionStorage.display = "none";
 }
 corn.onclick = function(){
     corn.style.display = "none";
+    sessionStorage.display = "none";
 }
 meat.onclick = function(){
     meat.style.display = "none";
+    sessionStorage.display = "none";
 }
 
 const cashRegister = document.getElementById("cash");
